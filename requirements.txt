@@ -1,4 +1,4 @@
 pytest
-request
+requests
 pytest-json
 python-dotenv
