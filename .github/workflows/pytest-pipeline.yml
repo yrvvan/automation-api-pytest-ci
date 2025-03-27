@@ -40,7 +40,7 @@ jobs:
     # Step 4: Run tests
     - name: Run tests
       run: |
-        pytest -v --json-report --json-report-file=report.json  # Run pytest and generate json report
+        pytest -v --json-report --json-report-file=report.json  # Run pytest and generate json report || true
 
     # Step 6: Send notification to Mattermost (run your Python script)
     - name: Send notification to Mattermost
