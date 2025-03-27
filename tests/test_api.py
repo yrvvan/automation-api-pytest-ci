@@ -9,5 +9,5 @@ def test_get_posts():
 
 def test_create_post(sample_payload):
     response = requests.post(f"{BASE_URL}/posts", json=sample_payload)
-    assert response.status_code == 204
+    assert response.status_code == 201
     assert response.json()["title"] == sample_payload["title"]
