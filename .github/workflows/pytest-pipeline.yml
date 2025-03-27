@@ -46,10 +46,3 @@ jobs:
     - name: Send notification to Mattermost
       run: |
         python helper/summary_helper.py  # Make sure the Python script is in your repository
-
-    # Optionally, you can clean up logs or artifacts after running tests
-    - name: Upload test results (optional)
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: result.log
