@@ -30,17 +30,17 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    # Step 5: Set environment variables (in case you need to set them in the pipeline)
+    # Step 4: Set environment variables (in case you need to set them in the pipeline)
     - name: Set Environment Variables
       run: |
         echo "MATTERMOST_WEBHOOK=${{ secrets.MATTERMOST_WEBHOOK }}" >> $GITHUB_ENV
         echo "ENV=${{ vars.ENV }}" >> $GITHUB_ENV
       # Ensure the MATTERMOST_WEBHOOK is added in your GitHub secrets.
 
-    # Step 4: Run tests
+    # Step 5: Run tests
     - name: Run tests
       run: |
-        pytest -v --json-report --json-report-file=report.json  # Run pytest and generate json report || true
+        pytest -v --json-report --json-report-file=report.json  # Run pytest and generate json report || exit 0
 
     # Step 6: Send notification to Mattermost (run your Python script)
     - name: Send notification to Mattermost
