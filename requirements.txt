@@ -1,6 +1,5 @@
 pytest
 requests
 pytest-json
-json-report
 python-dotenv
 pytest-json-report
