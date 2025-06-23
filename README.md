@@ -56,10 +56,14 @@ pytest -v --json-report --json-report-file=report.json
 
 or you can run it by `Makefile`
 ```bash
-make all
+e2e-notify
 ```
-
 This will generate report in json format and send the success rate summary into slack
+or
+```bash
+e2e-html
+```
+This will generate report in html format and open the html report
 
 ## Folder Structure
 
