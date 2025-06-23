@@ -7,3 +7,6 @@ tests/__pycache__
 venv
 report.json
 .env
+fixtures/*_token.json
+report.html
+assets

@@ -1,0 +1,9 @@
+{
+  "adminEmail": "idekutomation@protonmail.com",
+  "superAdminEmail": "idekutomationsuper@protonmail.com",
+  "adminAccounts": {
+    "stg": { "storeId": 2213 },
+    "uat": { "storeId": 2213 },
+    "prod": { "storeId": 1713 }
+  }
+}

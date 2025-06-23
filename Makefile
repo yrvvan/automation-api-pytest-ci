@@ -1,14 +1,29 @@
-test-all:
-	pytest -v --json-report --json-report-file=report.json
-test-get:
-	pytest -m get -v --json-report --json-report-file=report.json
-test-post:
-	pytest -m post -v --json-report --json-report-file=report.json
+global-login:
+	python helpers/single_sign_on.py
+
+test-all-json:
+	pytest -s -v --json-report --json-report-file=report.json
+test-get-json:
+	pytest -s -m get -v --json-report --json-report-file=report.json
+test-post-json:
+	pytest -s -m post -v --json-report --json-report-file=report.json
+
+test-all-html:
+	pytest -s -v --html=report.html
+test-get-html:
+	pytest -s -m get -v --html=report.html
+test-post-html:
+	pytest -s -m post -v --html=report.html
 
 notify:
 	python helpers/report_generator.py
 html:
 	python helpers/html_viewer.py
 
-e2e-notify: test-all notify
-e2e-html: test-all html
+e2e-all-notify: global-login test-all-json notify
+e2e-get-notify: global-login test-get-json notify
+e2e-post-notify: global-login test-post-json notify
+
+e2e-all-html: global-login test-all-html html
+e2e-get-html: global-login test-get-html html
+e2e-post-html: global-login test-post-html html

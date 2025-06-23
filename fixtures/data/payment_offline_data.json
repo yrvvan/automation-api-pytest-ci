@@ -1,0 +1,36 @@
+{
+  "post": {
+    "validData": {
+      "id": 0,
+      "name": "Test Payment Offline",
+      "sequence": 0,
+      "serviceType": ["DINE_IN", "TAKEOUT", "DELIVERY"],
+      "status": 1,
+      "type": "SINGLE",
+      "isRecordAndDisplay": true,
+      "logo": {
+        "filename": null,
+        "id": 0,
+        "prefix": null,
+        "url": null
+      }
+    }
+  },
+  "put": {
+    "validData": {
+      "id": 0,
+      "name": "Edit Payment Offline",
+      "sequence": 48,
+      "serviceType": ["DINE_IN", "TAKEOUT"],
+      "status": 1,
+      "type": "SINGLE",
+      "isRecordAndDisplay": true,
+      "logo": {
+        "filename": null,
+        "id": 0,
+        "prefix": null,
+        "url": null
+      }
+    }
+  }
+}

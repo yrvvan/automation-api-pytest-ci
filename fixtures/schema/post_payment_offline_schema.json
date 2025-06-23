@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "timestamp",
+        "code",
+        "status",
+        "requestID"
+    ],
+    "properties": {
+        "timestamp": {
+            "type": "integer",
+            "default": 0,
+            "title": "The timestamp Schema",
+            "examples": [
+                1741310333174
+            ]
+        },
+        "code": {
+            "type": "string",
+            "default": "",
+            "title": "The code Schema",
+            "examples": [
+                "OK"
+            ]
+        },
+        "status": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status Schema",
+            "examples": [
+                200
+            ]
+        },
+        "requestID": {
+            "type": "string",
+            "default": "",
+            "title": "The requestID Schema",
+            "examples": [
+                "F253F771-8A2A-41E4-9DB8-D4C62BB369CA"
+            ]
+        }
+    },
+    "examples": [{
+        "timestamp": 1741310333174,
+        "code": "OK",
+        "status": 200,
+        "requestID": "F253F771-8A2A-41E4-9DB8-D4C62BB369CA"
+    }]
+}
