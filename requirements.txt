@@ -3,3 +3,4 @@ requests
 pytest-json
 python-dotenv
 pytest-json-report
+jsonschema
