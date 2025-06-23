@@ -7,7 +7,7 @@ def load_json_schema(file_name: str):
     """Loads a JSON schema from the fixtures/jsonschema folder."""
     schema_path = os.path.normpath(
         os.path.join(
-            os.path.dirname(__file__), "..", "fixtures", "jsonschema", file_name
+            os.path.dirname(__file__), "..", "fixtures", "schema", file_name
         )
     )
 

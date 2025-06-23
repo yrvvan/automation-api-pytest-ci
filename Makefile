@@ -7,5 +7,8 @@ test-post:
 
 notify:
 	python helpers/report_generator.py
+html:
+	python helpers/html_viewer.py
 
-all: test-all notify
+e2e-notify: test-all notify
+e2e-html: test-all html
