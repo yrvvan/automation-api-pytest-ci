@@ -56,14 +56,24 @@ pytest -v --json-report --json-report-file=report.json
 
 or you can run it by `Makefile`
 ```bash
-e2e-all-notify
+make e2e-all-notify
 ```
 This will generate report in json format and send the success rate summary into slack
 or
 ```bash
-e2e-all-html
+make e2e-all-html
 ```
 This will generate report in html format and open the html report
+
+Or if you want to trigger notification manually, you can execute this command
+```bash
+make notify
+```
+and 
+```bash
+make html
+```
+will open the html report
 
 ## Folder Structure
 
