@@ -45,9 +45,9 @@ jobs:
     # Step 5: Run tests
     - name: Run tests
       run: |
-        pytest -s -v --json-report --json-report-file=report.json  # Run pytest and generate json report || exit 0
+        make e2e-all-notify
 
     # Step 6: Send notification to Slack (run your Python script)
-    - name: Send notification to Slack
-      run: |
-        python helpers/report_generator.py  # Make sure the Python script is in your repository
+    # - name: Send notification to Slack
+    #   run: |
+    #     python helpers/report_generator.py  # Make sure the Python script is in your repository
