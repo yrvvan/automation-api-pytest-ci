@@ -128,13 +128,8 @@ Report → Attached slack success rate summary notification after testing on loc
 
 This project using 2 reporters:
 
-- html for e2e testing reporter to generate HTML format
-- json for e2e testing reporter to generate JSON format
-
-This project can generate 3 format reports:
-
-- .html
-- .json
+- html to generate HTML format
+- json to generate JSON format
 
 ## Troubleshooting
 
