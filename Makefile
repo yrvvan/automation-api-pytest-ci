@@ -20,10 +20,10 @@ notify:
 html:
 	python helpers/html_viewer.py
 
-e2e-all-notify: global-login test-all-json notify
-e2e-get-notify: global-login test-get-json notify
-e2e-post-notify: global-login test-post-json notify
+e2e-all-notify: global-login test-all-json
+e2e-get-notify: global-login test-get-json
+e2e-post-notify: global-login test-post-json
 
-e2e-all-html: global-login test-all-html html
-e2e-get-html: global-login test-get-html html
-e2e-post-html: global-login test-post-html html
+e2e-all-html: global-login test-all-html
+e2e-get-html: global-login test-get-html
+e2e-post-html: global-login test-post-html

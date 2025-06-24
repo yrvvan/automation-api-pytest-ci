@@ -48,6 +48,6 @@ jobs:
         make e2e-all-notify
 
     # Step 6: Send notification to Slack (run your Python script)
-    # - name: Send notification to Slack
-    #   run: |
-    #     python helpers/report_generator.py  # Make sure the Python script is in your repository
+    - name: Send notification to Slack
+      run: |
+        make notify
