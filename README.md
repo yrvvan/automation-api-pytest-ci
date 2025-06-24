@@ -56,12 +56,12 @@ pytest -v --json-report --json-report-file=report.json
 
 or you can run it by `Makefile`
 ```bash
-e2e-notify
+e2e-all-notify
 ```
 This will generate report in json format and send the success rate summary into slack
 or
 ```bash
-e2e-html
+e2e-all-html
 ```
 This will generate report in html format and open the html report
 
@@ -108,8 +108,8 @@ Branch Name → feat/post-create-user
 Example Prefix:
 
 feat/: create new users for merchant Alibaba
-test/: add step definition and custom command for order journey
-fix/: resolve issue where scenario order failed
+test/: add new test case for create new users for merchant Alibaba
+fix/: resolve issue where scenario create user failed
 chore/: refactor API reporter handling logic
 docs/: update fixture for new data test, readme, or other documentation
 ```
@@ -119,7 +119,7 @@ docs/: update fixture for new data test, readme, or other documentation
 ```bash
 Commit Message and Title PR → feat: Create new users for merchant Alibaba
 Description PR → Create new scenario for create new users for merchant Alibaba
-Link Ticket → https://app.asana.com/0/1208804812617918/1208815339607579
+Link Ticket → https://yourcompany.jira.com/TASK-1
 Reviewer → Irwan Rosyadi
 Report → Attached slack success rate summary notification after testing on local environment
 ``` 

@@ -33,16 +33,21 @@ jobs:
     # Step 4: Set environment variables (in case you need to set them in the pipeline)
     - name: Set Environment Variables
       run: |
-        echo "MATTERMOST_WEBHOOK=${{ secrets.MATTERMOST_WEBHOOK }}" >> $GITHUB_ENV
+        echo "SLACK_WEBHOOK=${{ secrets.SLACK_WEBHOOK }}" >> $GITHUB_ENV
+        echo "API_PORTAL=${{ secrets.API_PORTAL }}" >> $GITHUB_ENV
+        echo "API_IDEKU=${{ secrets.API_IDEKU }}" >> $GITHUB_ENV
+        echo "PASSWORD=${{ secrets.PASSWORD }}" >> $GITHUB_ENV
+        echo "API_POS=${{ secrets.API_POS }}" >> $GITHUB_ENV
+        echo "BASE_URL=${{ vars.BASE_URL }}" >> $GITHUB_ENV
         echo "ENV=${{ vars.ENV }}" >> $GITHUB_ENV
-      # Ensure the MATTERMOST_WEBHOOK is added in your GitHub secrets.
+      # Ensure the SLACK_WEBHOOK is added in your GitHub secrets.
 
     # Step 5: Run tests
     - name: Run tests
       run: |
-        pytest -v --json-report --json-report-file=report.json  # Run pytest and generate json report || exit 0
+        pytest -s -v --json-report --json-report-file=report.json  # Run pytest and generate json report || exit 0
 
-    # Step 6: Send notification to Mattermost (run your Python script)
-    - name: Send notification to Mattermost
+    # Step 6: Send notification to Slack (run your Python script)
+    - name: Send notification to Slack
       run: |
-        python helper/summary_helper.py  # Make sure the Python script is in your repository
+        python helpers/report_generator.py  # Make sure the Python script is in your repository
