@@ -20,9 +20,9 @@ notify:
 html:
 	python helpers/html_viewer.py
 
-e2e-all-notify: global-login test-all-json
-e2e-get-notify: global-login test-get-json
-e2e-post-notify: global-login test-post-json
+e2e-all-json: global-login test-all-json
+e2e-get-json: global-login test-get-json
+e2e-post-json: global-login test-post-json
 
 e2e-all-html: global-login test-all-html
 e2e-get-html: global-login test-get-html
